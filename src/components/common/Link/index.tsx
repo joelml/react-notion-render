@@ -7,7 +7,7 @@ export interface Props {
 }
 
 function Link({ url, children, className }: Props) {
-  const redirectProps = url.startsWith('#')
+  const redirectProps = url.startsWith('#') || url.startsWith('/')
     ? {}
     : {
         target: '_blank', rel: 'noreferrer'

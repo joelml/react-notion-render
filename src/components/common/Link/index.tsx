@@ -7,7 +7,7 @@ export interface Props {
 }
 
 function Link({ url, children, className }: Props) {
-  const redirectProps = url.startsWith('#') || url.startsWith('/')
+  const redirectProps = url.startsWith('#') || url.startsWith('/') || url.startsWith('https://sebx.io')
     ? {}
     : {
         target: '_blank', rel: 'noreferrer'
